@@ -69,7 +69,7 @@ async def ask_action(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "What do you want to do with this post?",
         reply_markup=reply_markup,
-        quote=True
+        reply_to_message_id=update.message.message_id
     )
 
     return CHOOSING_ACTION
